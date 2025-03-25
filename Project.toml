@@ -1,0 +1,13 @@
+name = "ParticleFlowFilter"
+uuid = "ad46680d-d0b6-42ce-8fc5-57d95be3417c"
+authors = ["Nikolaj T. Mucke"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.6.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
