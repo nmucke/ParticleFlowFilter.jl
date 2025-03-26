@@ -93,9 +93,6 @@ function get_flow(prior_particles, obs, noise, observation_operator, observation
     dK = kernel_derivative.(prior_particles, prior_particles'; variance = PRIOR_VAR)
     I = sum(1f0 / NUM_PARTICLES .* (K .* d_posterior_dx' .+ dK), dims = 2)
 
-    flow = PRIOR_VAR .* I
-    prior_particles = prior_particles .+ ds .* flow
-
     return PRIOR_VAR .* I
 end
 
